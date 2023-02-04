@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.*;
 // this is not a full list, just the most common
 public class Snippets {
 
-  void browser_command_examples() {
+  void browserCommandExamples() {
 
     open("https://google.com");
     open("/customer/orders");     // -Dselenide.baseUrl=http://123.23.23.1
@@ -46,7 +46,7 @@ public class Snippets {
 
   }
 
-  void selectors_examples() {
+  void selectorsExamples() {
     $("div").click();
     element("div").click();
 
@@ -80,7 +80,7 @@ public class Snippets {
     $(".red").click();
   }
 
-  void actions_examples() {
+  void actionsExamples() {
     $("").click();
     $("").doubleClick();
     $("").contextClick();
@@ -111,7 +111,7 @@ public class Snippets {
 
   }
 
-  void assertions_examples() {
+  void assertionsExamples() {
     $("").shouldBe(visible);
     $("").shouldNotBe(visible);
     $("").shouldHave(text("abc"));
@@ -125,7 +125,7 @@ public class Snippets {
 
   }
 
-  void conditions_examples() {
+  void conditionsExamples() {
     $("").shouldBe(visible);
     $("").shouldBe(hidden);
 
@@ -156,7 +156,7 @@ public class Snippets {
     $("").shouldBe(enabled);
   }
 
-  void collections_examples() {
+  void collectionsExamples() {
 
     $$("div"); // does nothing!
 
@@ -194,7 +194,7 @@ public class Snippets {
 
   }
 
-  void file_operation_examples() throws FileNotFoundException {
+  void fileOperationExamples() throws FileNotFoundException {
 
     File file1 = $("a.fileLink").download(); // only for <a href=".."> links
     File file2 = $("div").download(DownloadOptions.using(FileDownloadMode.FOLDER)); // more common options, but may have problems with Grid/Selenoid
@@ -206,7 +206,7 @@ public class Snippets {
     $("uploadButton").click();
   }
 
-  void javascript_examples() {
+  void javascriptExamples() {
     executeJavaScript("alert('selenide')");
     executeJavaScript("alert(arguments[0]+arguments[1])", "abc", 12);
     long fortytwo = executeJavaScript("return arguments[0]*arguments[1];", 6, 7);
